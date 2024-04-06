@@ -1,0 +1,242 @@
+﻿<Window x:Class="UiEditor.UiEditorWindow"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:UiEditor"
+        xmlns:System="clr-namespace:System;assembly=mscorlib"
+        mc:Ignorable="d" Title="Ui Editor" SizeToContent="WidthAndHeight" ResizeMode="CanMinimize"
+        Loaded="Window_Loaded">
+
+    <Window.Resources>
+        <System:Int32 x:Key="tool_bar_item_width">60</System:Int32>
+        <System:Int32 x:Key="tool_bar_item_height">30</System:Int32>
+        <System:String x:Key="properties_border_color">Blue</System:String>
+        <System:String x:Key="editor_border_color">Purple</System:String>
+        <System:Int32 x:Key="property_grid_line_width">1</System:Int32>
+    </Window.Resources>
+    <DockPanel>
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="_File">
+                <MenuItem Name="open_default_menu_item" Header="Open default" />
+                <MenuItem Name="save_default_menu_item" Header="Save default" />                
+                <MenuItem Name="open_menu_item" Header="Open..." />
+                <MenuItem Name="save_as_menu_item" Header="Save As..." />
+                <Separator />
+                <MenuItem Header="_Exit" />
+            </MenuItem>
+        </Menu>
+
+        <Grid DockPanel.Dock="Top">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="{Binding Source={StaticResource tool_bar_item_height}}"/>
+                <RowDefinition Height="429"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+            <Border Grid.Row="0" BorderBrush="{Binding Source={StaticResource properties_border_color}}" BorderThickness="2">
+                <Grid Name="tool_bar_grid">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="{Binding Source={StaticResource tool_bar_item_width}}"/>
+                        <ColumnDefinition Width="{Binding Source={StaticResource tool_bar_item_width}}"/>
+                        <ColumnDefinition Width="{Binding Source={StaticResource tool_bar_item_width}}"/>
+                    </Grid.ColumnDefinitions>
+                    <ToggleButton Name="select_toggle_button" Grid.Column="0">Select</ToggleButton>
+                    <ToggleButton Name="text_toggle_button" Grid.Column="1">Text</ToggleButton>
+                    <ToggleButton Name="polygon_toggle_button" Grid.Column="2">Polygon</ToggleButton>
+                </Grid>
+            </Border>
+            <Grid Grid.Row="1" Name="right_panel_grid">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="497"/>
+                    <ColumnDefinition Width="3"/>
+                    <ColumnDefinition Width="auto"/>
+                </Grid.ColumnDefinitions>
+                <Canvas Name="canvas" Grid.Column="0" MouseDown="Canvas_MouseDown" MouseMove="Canvas_MouseMove" MouseUp="canvas_MouseUp" Background="Navy" Focusable="True">
+                </Canvas>
+                <GridSplitter  Name="grid_splitter" Grid.Column="1" HorizontalAlignment="Stretch" Background="{Binding Source={StaticResource properties_border_color}}"/>
+                <TabControl Grid.Column="2">
+                    <TabItem Header="Properties">
+                        <DockPanel VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Background="White">
+                            <Border BorderBrush="{Binding Source={StaticResource properties_border_color}}" BorderThickness="1"  HorizontalAlignment="Stretch" VerticalAlignment="Top" DockPanel.Dock="Top">
+                                <ComboBox Name="name_combo_box"/>
+                            </Border>
+                            <Border HorizontalAlignment="Stretch" VerticalAlignment="Stretch" DockPanel.Dock="Top" BorderBrush="{Binding Source={StaticResource properties_border_color}}" BorderThickness="1">
+                                <Grid VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="auto"/>
+                                        <RowDefinition Height="auto"/>
+                                        <RowDefinition Height="auto"/>
+                                        <RowDefinition Height="auto"/>
+                                        <RowDefinition Height="auto"/>
+                                        <RowDefinition Height="auto"/>
+                                        <RowDefinition Height="auto"/>
+                                        <RowDefinition Height="auto"/>
+                                        <RowDefinition Height="auto"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="auto"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Border Grid.Column="0" Grid.Row="0" BorderBrush="{Binding Source={StaticResource properties_border_color}}" BorderThickness="1">
+                                        <Label>Name</Label>
+                                    </Border>
+                                    <Border Grid.Column="1" Grid.Row="0" BorderBrush="{Binding Source={StaticResource properties_border_color}}" BorderThickness="1">
+                                        <TextBox Name="name_text_box"/>
+                                    </Border>
+                                    <Border Grid.Column="0" Grid.Row="1" BorderBrush="{Binding Source={StaticResource properties_border_color}}" BorderThickness="1">
+                                        <Label>Text</Label>
+                                    </Border>
+                                    <Border Grid.Column="1" Grid.Row="1" BorderBrush="{Binding Source={StaticResource properties_border_color}}" BorderThickness="1">
+                                        <TextBox Name="text_text_box" TextAlignment="Left" VerticalContentAlignment="Center">New Text</TextBox>
+                                    </Border>
+                                    <Border Grid.Column="0" Grid.Row="2" BorderBrush="{Binding Source={StaticResource properties_border_color}}" BorderThickness="1">
+                                        <Label>Text Color</Label>
+                                    </Border>
+                                    <Border Grid.Column="1" Grid.Row="2" BorderBrush="{Binding Source={StaticResource properties_border_color}}" BorderThickness="1">
+                                        <DockPanel>
+                                            <Button Name="text_color_button" DockPanel.Dock="Left" Width="20" Margin="3" Background="Black"/>
+                                            <Label DockPanel.Dock="Left">A: 0x</Label>
+                                            <TextBox Name="text_color_a_text_box" Margin="0, 3, 3, 3" DockPanel.Dock="Left" Width="20" HorizontalAlignment="Left" TextAlignment="Center">FF</TextBox>
+                                            <Label DockPanel.Dock="Left">R: 0x</Label>
+                                            <TextBox Name="text_color_r_text_box" Margin="0, 3, 3, 3" DockPanel.Dock="Left" Width="20" HorizontalAlignment="Left" TextAlignment="Center">00</TextBox>
+                                            <Label DockPanel.Dock="Left">G: 0x</Label>
+                                            <TextBox Name="text_color_g_text_box" Margin="0, 3, 3, 3" DockPanel.Dock="Left" Width="20" HorizontalAlignment="Left" TextAlignment="Center">00</TextBox>
+                                            <Label DockPanel.Dock="Left">B: 0x</Label>
+                                            <TextBox Name="text_color_b_text_box" Margin="0, 3, 3, 3" DockPanel.Dock="Left" Width="20" HorizontalAlignment="Left" TextAlignment="Center">00</TextBox>
+                                        </DockPanel>
+                                    </Border>
+                                    <Border Grid.Column="0" Grid.Row="3" BorderBrush="{Binding Source={StaticResource properties_border_color}}" BorderThickness="1">
+                                        <Label>Text Font</Label>
+                                    </Border>
+                                    <Border Grid.Column="1" Grid.Row="3" BorderBrush="{Binding Source={StaticResource properties_border_color}}" BorderThickness="1">
+                                        <DockPanel>
+                                            <ComboBox Name="font_combo_box" DockPanel.Dock="Left" Width="auto" Margin="3" SelectedIndex="0">
+                                                <ComboBoxItem>標楷體</ComboBoxItem>
+                                                <ComboBoxItem>新細明體</ComboBoxItem>
+                                                <ComboBoxItem>微軟正黑體</ComboBoxItem>
+                                                <ComboBoxItem>Arial</ComboBoxItem>
+                                                <ComboBoxItem>Calibri</ComboBoxItem>
+                                                <ComboBoxItem>Microsoft Sans Serif</ComboBoxItem>
+                                                <ComboBoxItem></ComboBoxItem>
+                                            </ComboBox>
+                                            <Label DockPanel.Dock="Left" Margin="3">Size:</Label>
+                                            <TextBox Margin="3" Name="font_size_text_box" DockPanel.Dock="Left" Width="20" HorizontalAlignment="Left" VerticalAlignment="Center" TextAlignment="Center" Height="20">10</TextBox>
+                                            <ToggleButton Margin="10, 3, 3, 3" Name="bold_toggle_button"  DockPanel.Dock="Left" HorizontalAlignment="Left" Width="50">Bold</ToggleButton>
+                                        </DockPanel>
+                                    </Border>
+                                    <Border Grid.Column="0" Grid.Row="4" BorderBrush="{Binding Source={StaticResource properties_border_color}}" BorderThickness="1">
+                                        <Label>Text Align</Label>
+                                    </Border>
+                                    <Border Grid.Column="1" Grid.Row="4" BorderBrush="{Binding Source={StaticResource properties_border_color}}" BorderThickness="1">
+                                        <ComboBox Name="alignment_combo_box" SelectedIndex="0">
+                                            <ComboBoxItem>Center</ComboBoxItem>
+                                            <ComboBoxItem>Left</ComboBoxItem>
+                                            <ComboBoxItem>Right</ComboBoxItem>
+                                            <ComboBoxItem></ComboBoxItem>
+                                        </ComboBox>
+                                    </Border>
+                                    <Border Grid.Column="0" Grid.Row="5"  BorderBrush="{Binding Source={StaticResource properties_border_color}}" BorderThickness="1">
+                                        <Label>Fill</Label>
+                                    </Border>
+                                    <Border Grid.Column="1" Grid.Row="5"  BorderBrush="{Binding Source={StaticResource properties_border_color}}" BorderThickness="1">
+                                        <DockPanel>
+                                            <ComboBox Name="fill_style_combo_box" SelectedIndex="1" DockPanel.Dock="Left"  Margin="0, 0, 3, 0">
+                                                    <ComboBoxItem>Filled</ComboBoxItem>
+                                                    <ComboBoxItem>Not Filled</ComboBoxItem>
+                                                    <ComboBoxItem></ComboBoxItem>
+                                            </ComboBox>
+                                            <Button Name="fill_color_button" DockPanel.Dock="Left" Width="20" Margin="3" Background="White"/>
+                                            <Label DockPanel.Dock="Left">A: 0x</Label>
+                                            <TextBox Name="fill_color_a_text_box" Margin="0, 3, 3, 3" DockPanel.Dock="Left" Width="20" HorizontalAlignment="Left" TextAlignment="Center">FF</TextBox>
+                                            <Label DockPanel.Dock="Left">R: 0x</Label>
+                                            <TextBox Name="fill_color_r_text_box" Margin="0, 3, 3, 3" DockPanel.Dock="Left" Width="20" HorizontalAlignment="Left" TextAlignment="Center">FF</TextBox>
+                                            <Label DockPanel.Dock="Left">G: 0x</Label>
+                                            <TextBox Name="fill_color_g_text_box" Margin="0, 3, 3, 3" DockPanel.Dock="Left" Width="20" HorizontalAlignment="Left" TextAlignment="Center">FF</TextBox>
+                                            <Label DockPanel.Dock="Left">B: 0x</Label>
+                                            <TextBox Name="fill_color_b_text_box" Margin="0, 3, 3, 3" DockPanel.Dock="Left" Width="20" HorizontalAlignment="Left" TextAlignment="Center">FF</TextBox>
+                                        </DockPanel>
+                                    </Border>
+                                    <Border Grid.Column="0" Grid.Row="6"  BorderBrush="{Binding Source={StaticResource properties_border_color}}" BorderThickness="1">
+                                        <Label>Border</Label>
+                                    </Border>
+                                    <Border Grid.Column="1" Grid.Row="6"  BorderBrush="{Binding Source={StaticResource properties_border_color}}" BorderThickness="1">
+                                        <DockPanel>
+                                            <Label DockPanel.Dock="Left" Margin="3, 0, 3, 0">Size:</Label>
+                                            <TextBox Margin="0, 3, 3, 3" Name="border_size_text_box" DockPanel.Dock="Left" Width="20" HorizontalAlignment="Left" TextAlignment="Center">1</TextBox>                                            
+                                            <Button Name="border_color_button" DockPanel.Dock="Left" Width="20" Margin="3" Background="White"/>
+                                            <Label DockPanel.Dock="Left">A: 0x</Label>
+                                            <TextBox Name="border_color_a_text_box" Margin="0, 3, 3, 3" DockPanel.Dock="Left" Width="20" HorizontalAlignment="Left" TextAlignment="Center">FF</TextBox>
+                                            <Label DockPanel.Dock="Left">R: 0x</Label>
+                                            <TextBox Name="border_color_r_text_box" Margin="0, 3, 3, 3" DockPanel.Dock="Left" Width="20" HorizontalAlignment="Left" TextAlignment="Center">FF</TextBox>
+                                            <Label DockPanel.Dock="Left">G: 0x</Label>
+                                            <TextBox Name="border_color_g_text_box" Margin="0, 3, 3, 3" DockPanel.Dock="Left" Width="20" HorizontalAlignment="Left" TextAlignment="Center">FF</TextBox>
+                                            <Label DockPanel.Dock="Left">B: 0x</Label>
+                                            <TextBox Name="border_color_b_text_box" Margin="0, 3, 3, 3" DockPanel.Dock="Left" Width="20" HorizontalAlignment="Left" TextAlignment="Center">FF</TextBox>
+                                        </DockPanel>
+                                    </Border>
+                                    <Border Grid.Column="0" Grid.Row="7" BorderBrush="{Binding Source={StaticResource properties_border_color}}" BorderThickness="1">
+                                        <Label>Position</Label>
+                                    </Border>
+                                    <Border Grid.Column="1" Grid.Row="7" BorderBrush="{Binding Source={StaticResource properties_border_color}}" BorderThickness="1">
+                                        <DockPanel Width="auto">
+                                            <Label DockPanel.Dock="Left">Left:</Label>
+                                            <TextBox Name="left_text_box" Margin="0, 3, 3, 3" DockPanel.Dock="Left" Width="30" HorizontalAlignment="Left" TextAlignment="Center">00</TextBox>
+                                            <Label DockPanel.Dock="Left">Top:</Label>
+                                            <TextBox Name="top_text_box" Margin="0, 3, 3, 3" DockPanel.Dock="Left" Width="30" HorizontalAlignment="Left" TextAlignment="Center">00</TextBox>
+                                            <Label DockPanel.Dock="Left">Width:</Label>
+                                            <TextBox Name="width_text_box" Margin="0, 3, 3, 3" DockPanel.Dock="Left" Width="30" HorizontalAlignment="Left" TextAlignment="Center">00</TextBox>
+                                            <Label DockPanel.Dock="Left">Height:</Label>
+                                            <TextBox Name="height_text_box" Margin="0, 3, 3, 3" DockPanel.Dock="Left" Width="30" HorizontalAlignment="Left" TextAlignment="Center">00</TextBox>
+                                        </DockPanel>
+                                    </Border>
+                                </Grid>
+                            </Border>
+                        </DockPanel>
+                    </TabItem>
+                    <TabItem Header="Editor">
+                        <DockPanel VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Background="White">
+                            <Border HorizontalAlignment="Stretch" VerticalAlignment="Stretch" DockPanel.Dock="Top" BorderBrush="{Binding Source={StaticResource editor_border_color}}" BorderThickness="1">
+                                <Grid VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="auto"/>
+                                        <RowDefinition Height="auto"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="auto"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Border Grid.Column="0" Grid.Row="0" BorderBrush="{Binding Source={StaticResource editor_border_color}}" BorderThickness="1">
+                                        <Label>Background</Label>
+                                    </Border>
+                                    <Border Grid.Column="1" Grid.Row="0" BorderBrush="{Binding Source={StaticResource editor_border_color}}" BorderThickness="1">
+                                        <Button Name="editor_background_color_button" DockPanel.Dock="Left" HorizontalAlignment="Stretch" Margin="3" Background="Navy"/>
+                                    </Border>
+                                    <Border Grid.Column="0" Grid.Row="1" BorderBrush="{Binding Source={StaticResource editor_border_color}}" BorderThickness="1">
+                                        <Label>Size</Label>
+                                    </Border>
+                                    <Border Grid.Column="1" Grid.Row="1" BorderBrush="{Binding Source={StaticResource editor_border_color}}" BorderThickness="1">
+                                        <DockPanel VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Background="White">
+                                            <Label DockPanel.Dock="Left">Width:</Label>
+                                            <TextBox Name="canvas_width_text_box" Margin="0, 3, 3, 3" DockPanel.Dock="Left" Width="30" HorizontalAlignment="Left" TextAlignment="Center">00</TextBox>
+                                            <Label DockPanel.Dock="Left">Height:</Label>
+                                            <TextBox Name="canvas_height_text_box" Margin="0, 3, 3, 3" DockPanel.Dock="Left" Width="30" HorizontalAlignment="Left" TextAlignment="Center">00</TextBox>
+                                            <Button Name="stretch_size_button" Margin="10, 2, 0, 2" DockPanel.Dock="Left" Width="auto" HorizontalAlignment="Left" Padding="4, 0, 4, 0">Stretch</Button>
+                                        </DockPanel>
+                                    </Border>                                    
+                                </Grid>
+                            </Border>
+                        </DockPanel>
+                    </TabItem>
+                </TabControl>
+            </Grid>
+
+            <Border Grid.Row="2" BorderBrush="{Binding Source={StaticResource properties_border_color}}" BorderThickness="2">
+                <StatusBar Grid.Row="2" Height="25">
+                    <StatusBarItem>
+                        <TextBlock Name="status_text" />
+                    </StatusBarItem>
+                </StatusBar>
+            </Border>
+        </Grid>
+    </DockPanel>
+</Window>

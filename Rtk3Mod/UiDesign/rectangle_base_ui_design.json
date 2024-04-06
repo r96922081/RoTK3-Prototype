@@ -1,0 +1,56 @@
+{
+  "UiEditorTexts": [],
+  "UiEditorRects": [
+    {
+      "Name": "base_rect_back",
+      "Top": 0.0,
+      "Left": 0.0,
+      "Width": 300.0,
+      "Height": 100.0,
+      "FillColor": "#FF001021",
+      "Thickness": 3.0,
+      "Stroke": "#FF8CBEDE"
+    },
+    {
+      "Name": "top_left_corner",
+      "Top": 0.0,
+      "Left": 0.0,
+      "Width": 10.0,
+      "Height": 10.0,
+      "FillColor": "#FF8CBEDE",
+      "Thickness": 2.0,
+      "Stroke": "#FF0000A0"
+    },
+    {
+      "Name": "bottom_left_corner",
+      "Top": 90.0,
+      "Left": 0.0,
+      "Width": 10.0,
+      "Height": 10.0,
+      "FillColor": "#FF8CBEDE",
+      "Thickness": 2.0,
+      "Stroke": "#FF0000A0"
+    },
+    {
+      "Name": "top_right_corner",
+      "Top": 0.0,
+      "Left": 290.0,
+      "Width": 10.0,
+      "Height": 10.0,
+      "FillColor": "#FF8CBEDE",
+      "Thickness": 2.0,
+      "Stroke": "#FF0000A0"
+    },
+    {
+      "Name": "bottom_right_corner",
+      "Top": 90.0,
+      "Left": 290.0,
+      "Width": 10.0,
+      "Height": 10.0,
+      "FillColor": "#FF8CBEDE",
+      "Thickness": 2.0,
+      "Stroke": "#FF0000A0"
+    }
+  ],
+  "UiEditorPolygons": []
+}

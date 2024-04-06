@@ -1,0 +1,419 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Github\\RoTK3-Prototype\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|Rtk3Mod||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E79A66F-6B46-48E6-8A0A-8DD359075F70}|UiEditor\\UiEditor.csproj|D:\\Github\\RoTK3-Prototype\\uieditor\\drawable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3E79A66F-6B46-48E6-8A0A-8DD359075F70}|UiEditor\\UiEditor.csproj|solutionrelative:uieditor\\drawable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E79A66F-6B46-48E6-8A0A-8DD359075F70}|UiEditor\\UiEditor.csproj|D:\\Github\\RoTK3-Prototype\\uieditor\\canvasstrategy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3E79A66F-6B46-48E6-8A0A-8DD359075F70}|UiEditor\\UiEditor.csproj|solutionrelative:uieditor\\canvasstrategy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E79A66F-6B46-48E6-8A0A-8DD359075F70}|UiEditor\\UiEditor.csproj|D:\\Github\\RoTK3-Prototype\\uieditor\\saveddata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3E79A66F-6B46-48E6-8A0A-8DD359075F70}|UiEditor\\UiEditor.csproj|solutionrelative:uieditor\\saveddata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|UiEditor||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2749776F-968D-4FC2-9CBB-7F77ADBEE9CE}|Rtk3Mod\\Rtk3Mod.csproj|D:\\Github\\RoTK3-Prototype\\rtk3mod\\gamewindow.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|",
+      "RelativeMoniker": "D:0:0:{2749776F-968D-4FC2-9CBB-7F77ADBEE9CE}|Rtk3Mod\\Rtk3Mod.csproj|solutionrelative:rtk3mod\\gamewindow.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2749776F-968D-4FC2-9CBB-7F77ADBEE9CE}|Rtk3Mod\\Rtk3Mod.csproj|D:\\Github\\RoTK3-Prototype\\rtk3mod\\gamewindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{2749776F-968D-4FC2-9CBB-7F77ADBEE9CE}|Rtk3Mod\\Rtk3Mod.csproj|solutionrelative:rtk3mod\\gamewindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2749776F-968D-4FC2-9CBB-7F77ADBEE9CE}|Rtk3Mod\\Rtk3Mod.csproj|D:\\Github\\RoTK3-Prototype\\rtk3mod\\model\\gv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2749776F-968D-4FC2-9CBB-7F77ADBEE9CE}|Rtk3Mod\\Rtk3Mod.csproj|solutionrelative:rtk3mod\\model\\gv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2749776F-968D-4FC2-9CBB-7F77ADBEE9CE}|Rtk3Mod\\Rtk3Mod.csproj|D:\\Github\\RoTK3-Prototype\\rtk3mod\\states\\menustates\\topmenustate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2749776F-968D-4FC2-9CBB-7F77ADBEE9CE}|Rtk3Mod\\Rtk3Mod.csproj|solutionrelative:rtk3mod\\states\\menustates\\topmenustate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2749776F-968D-4FC2-9CBB-7F77ADBEE9CE}|Rtk3Mod\\Rtk3Mod.csproj|D:\\Github\\RoTK3-Prototype\\rtk3mod\\states\\menustates\\specialmenustate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2749776F-968D-4FC2-9CBB-7F77ADBEE9CE}|Rtk3Mod\\Rtk3Mod.csproj|solutionrelative:rtk3mod\\states\\menustates\\specialmenustate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2749776F-968D-4FC2-9CBB-7F77ADBEE9CE}|Rtk3Mod\\Rtk3Mod.csproj|D:\\Github\\RoTK3-Prototype\\rtk3mod\\model\\controller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2749776F-968D-4FC2-9CBB-7F77ADBEE9CE}|Rtk3Mod\\Rtk3Mod.csproj|solutionrelative:rtk3mod\\model\\controller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2749776F-968D-4FC2-9CBB-7F77ADBEE9CE}|Rtk3Mod\\Rtk3Mod.csproj|D:\\Github\\RoTK3-Prototype\\rtk3mod\\model\\city.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2749776F-968D-4FC2-9CBB-7F77ADBEE9CE}|Rtk3Mod\\Rtk3Mod.csproj|solutionrelative:rtk3mod\\model\\city.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2749776F-968D-4FC2-9CBB-7F77ADBEE9CE}|Rtk3Mod\\Rtk3Mod.csproj|D:\\Github\\RoTK3-Prototype\\rtk3mod\\states\\selectofficertodocharitystate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2749776F-968D-4FC2-9CBB-7F77ADBEE9CE}|Rtk3Mod\\Rtk3Mod.csproj|solutionrelative:rtk3mod\\states\\selectofficertodocharitystate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2749776F-968D-4FC2-9CBB-7F77ADBEE9CE}|Rtk3Mod\\Rtk3Mod.csproj|D:\\Github\\RoTK3-Prototype\\rtk3mod\\states\\selectofficertodevstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2749776F-968D-4FC2-9CBB-7F77ADBEE9CE}|Rtk3Mod\\Rtk3Mod.csproj|solutionrelative:rtk3mod\\states\\selectofficertodevstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2749776F-968D-4FC2-9CBB-7F77ADBEE9CE}|Rtk3Mod\\Rtk3Mod.csproj|D:\\Github\\RoTK3-Prototype\\rtk3mod\\states\\selectofficertospystate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2749776F-968D-4FC2-9CBB-7F77ADBEE9CE}|Rtk3Mod\\Rtk3Mod.csproj|solutionrelative:rtk3mod\\states\\selectofficertospystate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2749776F-968D-4FC2-9CBB-7F77ADBEE9CE}|Rtk3Mod\\Rtk3Mod.csproj|D:\\Github\\RoTK3-Prototype\\rtk3mod\\model\\job.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2749776F-968D-4FC2-9CBB-7F77ADBEE9CE}|Rtk3Mod\\Rtk3Mod.csproj|solutionrelative:rtk3mod\\model\\job.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2749776F-968D-4FC2-9CBB-7F77ADBEE9CE}|Rtk3Mod\\Rtk3Mod.csproj|D:\\Github\\RoTK3-Prototype\\rtk3mod\\states\\selectofficertotradestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2749776F-968D-4FC2-9CBB-7F77ADBEE9CE}|Rtk3Mod\\Rtk3Mod.csproj|solutionrelative:rtk3mod\\states\\selectofficertotradestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2749776F-968D-4FC2-9CBB-7F77ADBEE9CE}|Rtk3Mod\\Rtk3Mod.csproj|D:\\Github\\RoTK3-Prototype\\rtk3mod\\states\\setvaluestates\\setvaluestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2749776F-968D-4FC2-9CBB-7F77ADBEE9CE}|Rtk3Mod\\Rtk3Mod.csproj|solutionrelative:rtk3mod\\states\\setvaluestates\\setvaluestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2749776F-968D-4FC2-9CBB-7F77ADBEE9CE}|Rtk3Mod\\Rtk3Mod.csproj|D:\\Github\\RoTK3-Prototype\\rtk3mod\\util\\util.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2749776F-968D-4FC2-9CBB-7F77ADBEE9CE}|Rtk3Mod\\Rtk3Mod.csproj|solutionrelative:rtk3mod\\util\\util.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2749776F-968D-4FC2-9CBB-7F77ADBEE9CE}|Rtk3Mod\\Rtk3Mod.csproj|D:\\Github\\RoTK3-Prototype\\rtk3mod\\states\\menustates\\trademenustate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2749776F-968D-4FC2-9CBB-7F77ADBEE9CE}|Rtk3Mod\\Rtk3Mod.csproj|solutionrelative:rtk3mod\\states\\menustates\\trademenustate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2749776F-968D-4FC2-9CBB-7F77ADBEE9CE}|Rtk3Mod\\Rtk3Mod.csproj|D:\\Github\\RoTK3-Prototype\\rtk3mod\\states\\npcplottingstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2749776F-968D-4FC2-9CBB-7F77ADBEE9CE}|Rtk3Mod\\Rtk3Mod.csproj|solutionrelative:rtk3mod\\states\\npcplottingstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2749776F-968D-4FC2-9CBB-7F77ADBEE9CE}|Rtk3Mod\\Rtk3Mod.csproj|D:\\Github\\RoTK3-Prototype\\rtk3mod\\states\\yesnostates\\commonyesnostate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2749776F-968D-4FC2-9CBB-7F77ADBEE9CE}|Rtk3Mod\\Rtk3Mod.csproj|solutionrelative:rtk3mod\\states\\yesnostates\\commonyesnostate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2749776F-968D-4FC2-9CBB-7F77ADBEE9CE}|Rtk3Mod\\Rtk3Mod.csproj|D:\\Github\\RoTK3-Prototype\\rtk3mod\\states\\setvaluestates\\settradequantitystate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2749776F-968D-4FC2-9CBB-7F77ADBEE9CE}|Rtk3Mod\\Rtk3Mod.csproj|solutionrelative:rtk3mod\\states\\setvaluestates\\settradequantitystate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2749776F-968D-4FC2-9CBB-7F77ADBEE9CE}|Rtk3Mod\\Rtk3Mod.csproj|D:\\Github\\RoTK3-Prototype\\rtk3mod\\states\\menustates\\devmenustate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2749776F-968D-4FC2-9CBB-7F77ADBEE9CE}|Rtk3Mod\\Rtk3Mod.csproj|solutionrelative:rtk3mod\\states\\menustates\\devmenustate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2749776F-968D-4FC2-9CBB-7F77ADBEE9CE}|Rtk3Mod\\Rtk3Mod.csproj|D:\\Github\\RoTK3-Prototype\\rtk3mod\\states\\yesnostates\\endcityyesnostate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2749776F-968D-4FC2-9CBB-7F77ADBEE9CE}|Rtk3Mod\\Rtk3Mod.csproj|solutionrelative:rtk3mod\\states\\yesnostates\\endcityyesnostate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2749776F-968D-4FC2-9CBB-7F77ADBEE9CE}|Rtk3Mod\\Rtk3Mod.csproj|d:\\github\\rotk3-prototype\\rtk3mod\\||{B270807C-D8C6-49EB-8EBE-8E8D566637A1}|5e9a8ac2-4f34-4521-858f-4c248ba31532"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Rtk3Mod",
+              "DocumentMoniker": "D:\\Github\\RoTK3-Prototype\\Rtk3Mod\\Rtk3Mod.csproj",
+              "RelativeDocumentMoniker": "Rtk3Mod\\Rtk3Mod.csproj",
+              "ToolTip": "D:\\Github\\RoTK3-Prototype\\Rtk3Mod\\Rtk3Mod.csproj",
+              "RelativeToolTip": "Rtk3Mod\\Rtk3Mod.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-04-06T14:08:31.503Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CanvasStrategy.cs",
+              "DocumentMoniker": "D:\\Github\\RoTK3-Prototype\\UiEditor\\CanvasStrategy.cs",
+              "RelativeDocumentMoniker": "UiEditor\\CanvasStrategy.cs",
+              "ToolTip": "D:\\Github\\RoTK3-Prototype\\UiEditor\\CanvasStrategy.cs",
+              "RelativeToolTip": "UiEditor\\CanvasStrategy.cs",
+              "ViewState": "AQIAALUAAAAAAAAAAAAjwLYAAAAyAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-06T14:01:11.626Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "SavedData.cs",
+              "DocumentMoniker": "D:\\Github\\RoTK3-Prototype\\UiEditor\\SavedData.cs",
+              "RelativeDocumentMoniker": "UiEditor\\SavedData.cs",
+              "ToolTip": "D:\\Github\\RoTK3-Prototype\\UiEditor\\SavedData.cs",
+              "RelativeToolTip": "UiEditor\\SavedData.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-06T14:00:11.365Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Drawable.cs",
+              "DocumentMoniker": "D:\\Github\\RoTK3-Prototype\\UiEditor\\Drawable.cs",
+              "RelativeDocumentMoniker": "UiEditor\\Drawable.cs",
+              "ToolTip": "D:\\Github\\RoTK3-Prototype\\UiEditor\\Drawable.cs",
+              "RelativeToolTip": "UiEditor\\Drawable.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-06T14:00:08.362Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UiEditor",
+              "DocumentMoniker": "D:\\Github\\RoTK3-Prototype\\UiEditor\\UiEditor.csproj",
+              "RelativeDocumentMoniker": "UiEditor\\UiEditor.csproj",
+              "ToolTip": "D:\\Github\\RoTK3-Prototype\\UiEditor\\UiEditor.csproj",
+              "RelativeToolTip": "UiEditor\\UiEditor.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-04-06T13:44:14.013Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "GameWindow.xaml",
+              "DocumentMoniker": "D:\\Github\\RoTK3-Prototype\\Rtk3Mod\\GameWindow.xaml",
+              "RelativeDocumentMoniker": "Rtk3Mod\\GameWindow.xaml",
+              "ToolTip": "D:\\Github\\RoTK3-Prototype\\Rtk3Mod\\GameWindow.xaml",
+              "RelativeToolTip": "Rtk3Mod\\GameWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-04-06T13:28:21.712Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "GameWindow.xaml.cs",
+              "DocumentMoniker": "D:\\Github\\RoTK3-Prototype\\Rtk3Mod\\GameWindow.xaml.cs",
+              "RelativeDocumentMoniker": "Rtk3Mod\\GameWindow.xaml.cs",
+              "ToolTip": "D:\\Github\\RoTK3-Prototype\\Rtk3Mod\\GameWindow.xaml.cs",
+              "RelativeToolTip": "Rtk3Mod\\GameWindow.xaml.cs",
+              "ViewState": "AQIAAFMAAAAAAAAAAAAgwHkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-06T13:28:19.43Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "TopMenuState.cs",
+              "DocumentMoniker": "D:\\Github\\RoTK3-Prototype\\Rtk3Mod\\States\\MenuStates\\TopMenuState.cs",
+              "RelativeDocumentMoniker": "Rtk3Mod\\States\\MenuStates\\TopMenuState.cs",
+              "ToolTip": "D:\\Github\\RoTK3-Prototype\\Rtk3Mod\\States\\MenuStates\\TopMenuState.cs",
+              "RelativeToolTip": "Rtk3Mod\\States\\MenuStates\\TopMenuState.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAACMAAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-06T11:02:50.596Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Job.cs",
+              "DocumentMoniker": "D:\\Github\\RoTK3-Prototype\\Rtk3Mod\\Model\\Job.cs",
+              "RelativeDocumentMoniker": "Rtk3Mod\\Model\\Job.cs",
+              "ToolTip": "D:\\Github\\RoTK3-Prototype\\Rtk3Mod\\Model\\Job.cs",
+              "RelativeToolTip": "Rtk3Mod\\Model\\Job.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-06T10:57:36.567Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "SelectOfficerToDevState.cs",
+              "DocumentMoniker": "D:\\Github\\RoTK3-Prototype\\Rtk3Mod\\States\\SelectOfficerToDevState.cs",
+              "RelativeDocumentMoniker": "Rtk3Mod\\States\\SelectOfficerToDevState.cs",
+              "ToolTip": "D:\\Github\\RoTK3-Prototype\\Rtk3Mod\\States\\SelectOfficerToDevState.cs",
+              "RelativeToolTip": "Rtk3Mod\\States\\SelectOfficerToDevState.cs",
+              "ViewState": "AQIAABUAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-06T10:43:25.4Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Controller.cs",
+              "DocumentMoniker": "D:\\Github\\RoTK3-Prototype\\Rtk3Mod\\Model\\Controller.cs",
+              "RelativeDocumentMoniker": "Rtk3Mod\\Model\\Controller.cs",
+              "ToolTip": "D:\\Github\\RoTK3-Prototype\\Rtk3Mod\\Model\\Controller.cs",
+              "RelativeToolTip": "Rtk3Mod\\Model\\Controller.cs",
+              "ViewState": "AQIAAHUAAAAAAAAAAAAjwIQAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-06T10:02:54.84Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "City.cs",
+              "DocumentMoniker": "D:\\Github\\RoTK3-Prototype\\Rtk3Mod\\Model\\City.cs",
+              "RelativeDocumentMoniker": "Rtk3Mod\\Model\\City.cs",
+              "ToolTip": "D:\\Github\\RoTK3-Prototype\\Rtk3Mod\\Model\\City.cs",
+              "RelativeToolTip": "Rtk3Mod\\Model\\City.cs",
+              "ViewState": "AQIAAGkAAAAAAAAAAAAjwHkAAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-06T10:02:16.552Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "SelectOfficerToSpyState.cs",
+              "DocumentMoniker": "D:\\Github\\RoTK3-Prototype\\Rtk3Mod\\States\\SelectOfficerToSpyState.cs",
+              "RelativeDocumentMoniker": "Rtk3Mod\\States\\SelectOfficerToSpyState.cs",
+              "ToolTip": "D:\\Github\\RoTK3-Prototype\\Rtk3Mod\\States\\SelectOfficerToSpyState.cs",
+              "RelativeToolTip": "Rtk3Mod\\States\\SelectOfficerToSpyState.cs",
+              "ViewState": "AQIAABwAAAAAAAAAAADwvyIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-06T10:32:26.175Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Gv.cs",
+              "DocumentMoniker": "D:\\Github\\RoTK3-Prototype\\Rtk3Mod\\Model\\Gv.cs",
+              "RelativeDocumentMoniker": "Rtk3Mod\\Model\\Gv.cs",
+              "ToolTip": "D:\\Github\\RoTK3-Prototype\\Rtk3Mod\\Model\\Gv.cs",
+              "RelativeToolTip": "Rtk3Mod\\Model\\Gv.cs",
+              "ViewState": "AQIAABsAAAAAAAAAAADwvykAAABFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-06T10:09:27.862Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "SpecialMenuState.cs",
+              "DocumentMoniker": "D:\\Github\\RoTK3-Prototype\\Rtk3Mod\\States\\MenuStates\\SpecialMenuState.cs",
+              "RelativeDocumentMoniker": "Rtk3Mod\\States\\MenuStates\\SpecialMenuState.cs",
+              "ToolTip": "D:\\Github\\RoTK3-Prototype\\Rtk3Mod\\States\\MenuStates\\SpecialMenuState.cs",
+              "RelativeToolTip": "Rtk3Mod\\States\\MenuStates\\SpecialMenuState.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAjwCMAAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-06T09:37:03.642Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "SelectOfficerToDoCharityState.cs",
+              "DocumentMoniker": "D:\\Github\\RoTK3-Prototype\\Rtk3Mod\\States\\SelectOfficerToDoCharityState.cs",
+              "RelativeDocumentMoniker": "Rtk3Mod\\States\\SelectOfficerToDoCharityState.cs",
+              "ToolTip": "D:\\Github\\RoTK3-Prototype\\Rtk3Mod\\States\\SelectOfficerToDoCharityState.cs",
+              "RelativeToolTip": "Rtk3Mod\\States\\SelectOfficerToDoCharityState.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAADEAAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-06T10:49:16.603Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "SelectOfficerToTradeState.cs",
+              "DocumentMoniker": "D:\\Github\\RoTK3-Prototype\\Rtk3Mod\\States\\SelectOfficerToTradeState.cs",
+              "RelativeDocumentMoniker": "Rtk3Mod\\States\\SelectOfficerToTradeState.cs",
+              "ToolTip": "D:\\Github\\RoTK3-Prototype\\Rtk3Mod\\States\\SelectOfficerToTradeState.cs",
+              "RelativeToolTip": "Rtk3Mod\\States\\SelectOfficerToTradeState.cs",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-06T10:49:06.815Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "DevMenuState.cs",
+              "DocumentMoniker": "D:\\Github\\RoTK3-Prototype\\Rtk3Mod\\States\\MenuStates\\DevMenuState.cs",
+              "RelativeDocumentMoniker": "Rtk3Mod\\States\\MenuStates\\DevMenuState.cs",
+              "ToolTip": "D:\\Github\\RoTK3-Prototype\\Rtk3Mod\\States\\MenuStates\\DevMenuState.cs",
+              "RelativeToolTip": "Rtk3Mod\\States\\MenuStates\\DevMenuState.cs",
+              "ViewState": "AQIAAD8AAAAAAAAAAAAAADwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-06T10:04:11.864Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "EndCityYesNoState.cs",
+              "DocumentMoniker": "D:\\Github\\RoTK3-Prototype\\Rtk3Mod\\States\\YesNoStates\\EndCityYesNoState.cs",
+              "RelativeDocumentMoniker": "Rtk3Mod\\States\\YesNoStates\\EndCityYesNoState.cs",
+              "ToolTip": "D:\\Github\\RoTK3-Prototype\\Rtk3Mod\\States\\YesNoStates\\EndCityYesNoState.cs",
+              "RelativeToolTip": "Rtk3Mod\\States\\YesNoStates\\EndCityYesNoState.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-06T10:06:35.82Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "TradeMenuState.cs",
+              "DocumentMoniker": "D:\\Github\\RoTK3-Prototype\\Rtk3Mod\\States\\MenuStates\\TradeMenuState.cs",
+              "RelativeDocumentMoniker": "Rtk3Mod\\States\\MenuStates\\TradeMenuState.cs",
+              "ToolTip": "D:\\Github\\RoTK3-Prototype\\Rtk3Mod\\States\\MenuStates\\TradeMenuState.cs",
+              "RelativeToolTip": "Rtk3Mod\\States\\MenuStates\\TradeMenuState.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-06T10:10:15.311Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "SetValueState.cs",
+              "DocumentMoniker": "D:\\Github\\RoTK3-Prototype\\Rtk3Mod\\States\\SetValueStates\\SetValueState.cs",
+              "RelativeDocumentMoniker": "Rtk3Mod\\States\\SetValueStates\\SetValueState.cs",
+              "ToolTip": "D:\\Github\\RoTK3-Prototype\\Rtk3Mod\\States\\SetValueStates\\SetValueState.cs",
+              "RelativeToolTip": "Rtk3Mod\\States\\SetValueStates\\SetValueState.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-06T10:32:02.738Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Util.cs",
+              "DocumentMoniker": "D:\\Github\\RoTK3-Prototype\\Rtk3Mod\\Util\\Util.cs",
+              "RelativeDocumentMoniker": "Rtk3Mod\\Util\\Util.cs",
+              "ToolTip": "D:\\Github\\RoTK3-Prototype\\Rtk3Mod\\Util\\Util.cs",
+              "RelativeToolTip": "Rtk3Mod\\Util\\Util.cs",
+              "ViewState": "AQIAAFUAAAAAAAAAAAAAAGIAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-06T10:38:54.524Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "CommonYesNoState.cs",
+              "DocumentMoniker": "D:\\Github\\RoTK3-Prototype\\Rtk3Mod\\States\\YesNoStates\\CommonYesNoState.cs",
+              "RelativeDocumentMoniker": "Rtk3Mod\\States\\YesNoStates\\CommonYesNoState.cs",
+              "ToolTip": "D:\\Github\\RoTK3-Prototype\\Rtk3Mod\\States\\YesNoStates\\CommonYesNoState.cs",
+              "RelativeToolTip": "Rtk3Mod\\States\\YesNoStates\\CommonYesNoState.cs",
+              "ViewState": "AQIAACEAAAAAAAAAAADwvzIAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-06T10:07:07.05Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "NpcPlottingState.cs",
+              "DocumentMoniker": "D:\\Github\\RoTK3-Prototype\\Rtk3Mod\\States\\NpcPlottingState.cs",
+              "RelativeDocumentMoniker": "Rtk3Mod\\States\\NpcPlottingState.cs",
+              "ToolTip": "D:\\Github\\RoTK3-Prototype\\Rtk3Mod\\States\\NpcPlottingState.cs",
+              "RelativeToolTip": "Rtk3Mod\\States\\NpcPlottingState.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAjwBoAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-06T10:18:20.188Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "SetTradeQuantityState.cs",
+              "DocumentMoniker": "D:\\Github\\RoTK3-Prototype\\Rtk3Mod\\States\\SetValueStates\\SetTradeQuantityState.cs",
+              "RelativeDocumentMoniker": "Rtk3Mod\\States\\SetValueStates\\SetTradeQuantityState.cs",
+              "ToolTip": "D:\\Github\\RoTK3-Prototype\\Rtk3Mod\\States\\SetValueStates\\SetTradeQuantityState.cs",
+              "RelativeToolTip": "Rtk3Mod\\States\\SetValueStates\\SetTradeQuantityState.cs",
+              "ViewState": "AQIAAE8AAAAAAAAAAADwv10AAAA+AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-06T10:10:19.514Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

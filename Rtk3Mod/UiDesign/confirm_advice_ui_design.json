@@ -1,0 +1,59 @@
+{
+  "UiEditorTexts": [
+    {
+      "Name": "who",
+      "Text": "荀彧說",
+      "TextBrush": "#FFFFFFFF",
+      "FontFamily": "新細明體",
+      "FontSize": 25.0,
+      "Align": 0,
+      "BgBrush": null,
+      "Top": 118.0,
+      "Left": 16.0,
+      "Width": 98.0,
+      "Height": 31.0,
+      "Bold": true
+    },
+    {
+      "Name": "say",
+      "Text": " 妙計 必成功",
+      "TextBrush": "#FF000000",
+      "FontFamily": "新細明體",
+      "FontSize": 25.0,
+      "Align": 0,
+      "BgBrush": "#FFFFFFFF",
+      "Top": 148.0,
+      "Left": 82.0,
+      "Width": 386.0,
+      "Height": 58.0,
+      "Bold": true
+    }
+  ],
+  "UiEditorRects": [
+    {
+      "Name": "rect_1",
+      "Top": 107.0,
+      "Left": 7.0,
+      "Width": 480.0,
+      "Height": 119.0,
+      "FillColor": "#FF001021",
+      "Thickness": 5.0,
+      "Stroke": "#FF8CBEDE"
+    }
+  ],
+  "UiEditorPolygons": [
+    {
+      "Name": "polygon_8",
+      "Top": 0.0,
+      "Left": 0.0,
+      "Thickness": 0.0,
+      "Points": [
+        "84,171",
+        "72,182",
+        "84,191"
+      ],
+      "Stroke": "#FF000000",
+      "FillColor": "#FFFFFFFF"
+    }
+  ]
+}

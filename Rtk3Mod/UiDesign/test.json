@@ -1,0 +1,31 @@
+{
+  "UiEditorTexts": [],
+  "UiEditorPolygons": [
+    {
+      "Name": "polygon_1",
+      "Top": 0.0,
+      "Left": 0.0,
+      "Thickness": 3.0,
+      "Points": [
+        "274,142",
+        "163,210",
+        "150,101"
+      ],
+      "Stroke": "#FF408080",
+      "FillColor": "#FF00FF00"
+    },
+    {
+      "Name": "polygon_3",
+      "Top": 0.0,
+      "Left": 0.0,
+      "Thickness": 6.0,
+      "Points": [
+        "354,196",
+        "243,264",
+        "230,155"
+      ],
+      "Stroke": "#FF004040",
+      "FillColor": "#FF00FF00"
+    }
+  ]
+}

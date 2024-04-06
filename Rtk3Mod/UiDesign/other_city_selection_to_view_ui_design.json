@@ -1,0 +1,35 @@
+{
+  "UiEditorTexts": [],
+  "UiEditorPolygons": [
+    {
+      "Name": "city_mark",
+      "Top": 0.0,
+      "Left": 0.0,
+      "Thickness": 1.0,
+      "Points": [
+        "134,53",
+        "134,73",
+        "144,63"
+      ],
+      "Stroke": "#FF000000",
+      "FillColor": "#FFFFFFFF"
+    },
+    {
+      "Name": "pointer",
+      "Top": 0.0,
+      "Left": 0.0,
+      "Thickness": 1.0,
+      "Points": [
+        "206,161",
+        "215,149",
+        "223,161",
+        "218,161",
+        "218,167",
+        "212,167",
+        "212,160"
+      ],
+      "Stroke": "#FF000000",
+      "FillColor": "#FFFFFFFF"
+    }
+  ]
+}

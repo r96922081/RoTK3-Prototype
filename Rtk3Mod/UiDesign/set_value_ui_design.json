@@ -1,0 +1,129 @@
+{
+  "UiEditorTexts": [
+    {
+      "Name": "digit7",
+      "Text": "0",
+      "TextBrush": "#FFFFFFFF",
+      "FontFamily": "標楷體",
+      "FontSize": 20.0,
+      "Align": 2,
+      "BgBrush": null,
+      "Top": 9.0,
+      "Left": 13.0,
+      "Width": 17.0,
+      "Height": 25.0,
+      "Bold": false
+    },
+    {
+      "Name": "digit6",
+      "Text": "0",
+      "TextBrush": "#FFFFFFFF",
+      "FontFamily": "標楷體",
+      "FontSize": 20.0,
+      "Align": 2,
+      "BgBrush": null,
+      "Top": 9.0,
+      "Left": 25.0,
+      "Width": 17.0,
+      "Height": 25.0,
+      "Bold": false
+    },
+    {
+      "Name": "digit5",
+      "Text": "0",
+      "TextBrush": "#FFFFFFFF",
+      "FontFamily": "標楷體",
+      "FontSize": 20.0,
+      "Align": 2,
+      "BgBrush": null,
+      "Top": 9.0,
+      "Left": 37.0,
+      "Width": 17.0,
+      "Height": 25.0,
+      "Bold": false
+    },
+    {
+      "Name": "digit4",
+      "Text": "0",
+      "TextBrush": "#FFFFFFFF",
+      "FontFamily": "標楷體",
+      "FontSize": 20.0,
+      "Align": 2,
+      "BgBrush": null,
+      "Top": 9.0,
+      "Left": 49.0,
+      "Width": 17.0,
+      "Height": 25.0,
+      "Bold": false
+    },
+    {
+      "Name": "digit3",
+      "Text": "0",
+      "TextBrush": "#FFFFFFFF",
+      "FontFamily": "標楷體",
+      "FontSize": 20.0,
+      "Align": 2,
+      "BgBrush": null,
+      "Top": 9.0,
+      "Left": 62.0,
+      "Width": 17.0,
+      "Height": 25.0,
+      "Bold": false
+    },
+    {
+      "Name": "digit2",
+      "Text": "0",
+      "TextBrush": "#FFFFFFFF",
+      "FontFamily": "標楷體",
+      "FontSize": 20.0,
+      "Align": 2,
+      "BgBrush": null,
+      "Top": 9.0,
+      "Left": 74.0,
+      "Width": 17.0,
+      "Height": 25.0,
+      "Bold": false
+    },
+    {
+      "Name": "digit1",
+      "Text": "0",
+      "TextBrush": "#FFFFFFFF",
+      "FontFamily": "標楷體",
+      "FontSize": 20.0,
+      "Align": 2,
+      "BgBrush": null,
+      "Top": 9.0,
+      "Left": 86.0,
+      "Width": 17.0,
+      "Height": 25.0,
+      "Bold": false
+    },
+    {
+      "Name": "digit0",
+      "Text": "0",
+      "TextBrush": "#FFFFFFFF",
+      "FontFamily": "標楷體",
+      "FontSize": 20.0,
+      "Align": 2,
+      "BgBrush": null,
+      "Top": 9.0,
+      "Left": 98.0,
+      "Width": 17.0,
+      "Height": 25.0,
+      "Bold": false
+    }
+  ],
+  "UiEditorRects": [
+    {
+      "Name": "back_rect",
+      "Top": 0.0,
+      "Left": 0.0,
+      "Width": 130.0,
+      "Height": 40.0,
+      "FillColor": null,
+      "Thickness": 2.0,
+      "Stroke": "#FF00FF00"
+    }
+  ],
+  "UiEditorPolygons": []
+}

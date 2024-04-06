@@ -1,0 +1,366 @@
+﻿using Newtonsoft.Json;
+using System;
+using System.Collections.Generic;
+using System.Globalization;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Input;
+using System.Windows.Media;
+
+namespace UiEditor
+{
+    public partial class UiEditorWindow : Window
+    {
+        private void add_event_handler()
+        {
+            text_toggle_button.Click += Text_toggle_button_Click;
+            polygon_toggle_button.Click += Polygon_toggle_button_Click;
+            select_toggle_button.Click += Select_toggle_button_Click;
+            canvas.KeyDown += Canvas_KeyDown;
+            canvas.KeyUp += Canvas_KeyUp;
+            name_text_box.KeyDown += Name_text_box_KeyDown;
+            name_combo_box.SelectionChanged += Name_combo_box_SelectionChanged;
+
+            save_as_menu_item.Click += Save_as_menu_item_Click;
+            save_default_menu_item.Click += Save_default_menu_item_Click;
+            open_menu_item.Click += Open_menu_item_Click;
+            open_default_menu_item.Click += Open_default_menu_item_Click;
+
+            text_color_button.Click += TextColorButtonClick;
+            text_color_a_text_box.TextChanged += TextColorTextBoxChanged;
+            text_color_r_text_box.TextChanged += TextColorTextBoxChanged;
+            text_color_g_text_box.TextChanged += TextColorTextBoxChanged;
+            text_color_b_text_box.TextChanged += TextColorTextBoxChanged;
+
+            fill_color_button.Click += FillColorButtonClick;
+            fill_color_a_text_box.TextChanged += FillColorTextBoxChanged;
+            fill_color_r_text_box.TextChanged += FillColorTextBoxChanged;
+            fill_color_g_text_box.TextChanged += FillColorTextBoxChanged;
+            fill_color_b_text_box.TextChanged += FillColorTextBoxChanged;
+
+            font_combo_box.SelectionChanged += FontComboBoxSelectionChanged;
+            fill_style_combo_box.SelectionChanged += FillStylecomboBoxSelectionChanged;
+            text_text_box.TextChanged += Text_text_box_TextChanged;
+            font_size_text_box.TextChanged += FontSizeTextBoxTextChanged;
+            alignment_combo_box.SelectionChanged += AlignmentBomboBoxSelectionChanged;
+            height_text_box.TextChanged += HeightTextBoxTextChanged;
+            width_text_box.TextChanged += WidthTextBoxTextChanged;
+            top_text_box.TextChanged += TopTextBoxTextChanged;
+            left_text_box.TextChanged += LeftTextBoxTextChanged;
+            bold_toggle_button.Checked += BoldToggleButtonCheckChanged;
+            bold_toggle_button.Unchecked += BoldToggleButtonCheckChanged;
+
+            border_size_text_box.TextChanged += BorderSizeTextBoxTextChanged;
+            border_color_button.Click += BorderColorButtonClick;
+            border_color_a_text_box.TextChanged += BorderColorTextBoxChanged;
+            border_color_r_text_box.TextChanged += BorderColorTextBoxChanged;
+            border_color_g_text_box.TextChanged += BorderColorTextBoxChanged;
+            border_color_b_text_box.TextChanged += BorderColorTextBoxChanged;
+
+            editor_background_color_button.Click += EditorBackgroundColorButtonClick;
+            canvas_height_text_box.TextChanged += CanvasSizetextBoxTextChanged;
+            canvas_width_text_box.TextChanged += CanvasSizetextBoxTextChanged;
+            stretch_size_button.Click += StretchSizeButtonClick;
+        }
+
+        private void BorderSizeTextBoxTextChanged(object sender, System.Windows.Controls.TextChangedEventArgs e)
+        {
+            syncer.SetBorderSizePropertyToSelections();
+        }
+
+        private void StretchSizeButtonClick(object sender, RoutedEventArgs e)
+        {
+            setting_canvas_size_from_code_behind = true;
+            canvas.Height = canvas_height_at_first;
+            canvas.Width = canvas_width_at_first;
+            canvas_height_text_box.Text = canvas_height_at_first.ToString();
+            canvas_width_text_box.Text = canvas_width_at_first.ToString();
+            setting_canvas_size_from_code_behind = false;
+        }
+
+        private void CanvasSizetextBoxTextChanged(object sender, System.Windows.Controls.TextChangedEventArgs e)
+        {
+            if (setting_canvas_size_from_code_behind)
+                return;
+
+            int height;
+            if (Int32.TryParse(canvas_height_text_box.Text, out height))
+                canvas.Height = height;
+
+            int width;
+            if (Int32.TryParse(canvas_width_text_box.Text, out width))
+                canvas.Width = width;
+        }
+
+        private void EditorBackgroundColorButtonClick(object sender, RoutedEventArgs e)
+        {
+            System.Windows.Forms.ColorDialog d = new System.Windows.Forms.ColorDialog();
+            if (d.ShowDialog() != System.Windows.Forms.DialogResult.OK)
+                return;
+
+            Color c = Color.FromArgb(d.Color.A, d.Color.R, d.Color.G, d.Color.B);
+            Gv.ui_editor_window.canvas.Background = new SolidColorBrush(c);
+            editor_background_color_button.Background = new SolidColorBrush(c);
+        }
+
+        private void LoadSavedFile(string file_path)
+        {
+            using (StreamReader reader = new StreamReader(file_path))
+            {
+                string file_content = reader.ReadToEnd();
+
+                SaveData save_data = JsonConvert.DeserializeObject<SaveData>(file_content);
+
+                for (int i = 0; i < save_data.UiEditorTexts.Count; i++)
+                {
+                    Console.WriteLine("{0}/{1}", i, save_data.UiEditorTexts.Count);
+                    UiEditorText d = save_data.UiEditorTexts[i];
+                    TextDrawable t = new TextDrawable(d.GetWpfUiElement());
+                    Gv.ui_editor_window.AddNewDrawable(t);
+                }
+
+                foreach (var d in save_data.UiEditorPolygons)
+                {
+                    PolygonDrawable t = new PolygonDrawable(d.GetWpfUiElement());
+                    Gv.ui_editor_window.AddNewDrawable(t);
+                }
+            }
+
+            Gv.ui_editor_window.selections.Clear();
+            Gv.ui_editor_window.update_selections();
+        }
+
+        private void Open_default_menu_item_Click(object sender, RoutedEventArgs e)
+        {
+            Gv.ui_editor_window.Reset();
+            LoadSavedFile(Gv.default_ui_design_path);
+        }
+
+        private void AlignmentBomboBoxSelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
+        {
+            syncer.SetAlignPropertyToSelections();
+        }
+
+        private void BoldToggleButtonCheckChanged(object sender, RoutedEventArgs e)
+        {
+            syncer.SetBoldPropertyToSelections();
+        }
+
+        private void FontSizeTextBoxTextChanged(object sender, System.Windows.Controls.TextChangedEventArgs e)
+        {
+            syncer.SetFontSizePropertyToSelections();
+        }
+
+        private void LeftTextBoxTextChanged(object sender, System.Windows.Controls.TextChangedEventArgs e)
+        {
+            syncer.SetLeftPropertyToSelections();
+        }
+
+        private void TopTextBoxTextChanged(object sender, System.Windows.Controls.TextChangedEventArgs e)
+        {
+            syncer.SetTopPropertyToSelections();
+        }
+
+        private void WidthTextBoxTextChanged(object sender, System.Windows.Controls.TextChangedEventArgs e)
+        {
+            syncer.SetWidthPropertyToSelections();
+        }
+
+        private void HeightTextBoxTextChanged(object sender, System.Windows.Controls.TextChangedEventArgs e)
+        {
+            syncer.SetHeightPropertyToSelections();
+        }
+
+        private void Text_text_box_TextChanged(object sender, System.Windows.Controls.TextChangedEventArgs e)
+        {
+            syncer.SetTextPropertyToSelections();
+        }
+
+        private void FillStylecomboBoxSelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
+        {
+            syncer.SetFillPropertyToSelections();
+        }
+
+        private void FontComboBoxSelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
+        {
+            syncer.SetFontPropertyToSelections();
+        }
+
+        private void TextColorTextBoxChanged(object sender, System.Windows.Controls.TextChangedEventArgs e)
+        {
+            byte a;
+            if (byte.TryParse(text_color_a_text_box.Text, NumberStyles.HexNumber, null, out a) == false)
+                return;
+            byte r;
+            if (byte.TryParse(text_color_r_text_box.Text, NumberStyles.HexNumber, null, out r) == false)
+                return;
+            byte g;
+            if (byte.TryParse(text_color_g_text_box.Text, NumberStyles.HexNumber, null, out g) == false)
+                return;
+            byte b;
+            if (byte.TryParse(text_color_b_text_box.Text, NumberStyles.HexNumber, null, out b) == false)
+                return;
+
+            Color c = Color.FromArgb(a, r, g, b);
+            text_color_button.Background = new SolidColorBrush(c);
+
+            syncer.SetTextColorPropertyToSelections();
+        }
+
+        private void TextColorButtonClick(object sender, RoutedEventArgs e)
+        {
+            System.Windows.Forms.ColorDialog d = new System.Windows.Forms.ColorDialog();
+            if (d.ShowDialog() != System.Windows.Forms.DialogResult.OK)
+                return;
+
+            Color c = Color.FromArgb(d.Color.A, d.Color.R, d.Color.G, d.Color.B);
+            text_color_button.Background = new SolidColorBrush(c);
+
+            Utility.SetColorToTextBox(c, Gv.ui_editor_window.text_color_a_text_box,
+                Gv.ui_editor_window.text_color_r_text_box, Gv.ui_editor_window.text_color_g_text_box,
+                Gv.ui_editor_window.text_color_b_text_box);
+
+            syncer.SetTextColorPropertyToSelections();
+        }
+
+        private void BorderColorButtonClick(object sender, RoutedEventArgs e)
+        {
+            System.Windows.Forms.ColorDialog d = new System.Windows.Forms.ColorDialog();
+            if (d.ShowDialog() != System.Windows.Forms.DialogResult.OK)
+                return;
+
+            Color c = Color.FromArgb(d.Color.A, d.Color.R, d.Color.G, d.Color.B);
+            border_color_button.Background = new SolidColorBrush(c);
+
+            Utility.SetColorToTextBox(c, Gv.ui_editor_window.border_color_a_text_box,
+                Gv.ui_editor_window.border_color_r_text_box, Gv.ui_editor_window.border_color_g_text_box,
+                Gv.ui_editor_window.border_color_b_text_box);
+
+            syncer.SetBorderColorPropertyToSelections();
+        }
+
+        private void FillColorTextBoxChanged(object sender, System.Windows.Controls.TextChangedEventArgs e)
+        {
+            byte a;
+            if (byte.TryParse(fill_color_a_text_box.Text, NumberStyles.HexNumber, null, out a) == false)
+                return;
+            byte r;
+            if (byte.TryParse(fill_color_r_text_box.Text, NumberStyles.HexNumber, null, out r) == false)
+                return;
+            byte g;
+            if (byte.TryParse(fill_color_g_text_box.Text, NumberStyles.HexNumber, null, out g) == false)
+                return;
+            byte b;
+            if (byte.TryParse(fill_color_b_text_box.Text, NumberStyles.HexNumber, null, out b) == false)
+                return;
+
+            Color c = Color.FromArgb(a, r, g, b);
+            fill_color_button.Background = new SolidColorBrush(c);
+
+            syncer.SetFillPropertyToSelections();
+        }
+
+        private void BorderColorTextBoxChanged(object sender, System.Windows.Controls.TextChangedEventArgs e)
+        {
+            byte a;
+            if (byte.TryParse(border_color_a_text_box.Text, NumberStyles.HexNumber, null, out a) == false)
+                return;
+            byte r;
+            if (byte.TryParse(border_color_r_text_box.Text, NumberStyles.HexNumber, null, out r) == false)
+                return;
+            byte g;
+            if (byte.TryParse(border_color_g_text_box.Text, NumberStyles.HexNumber, null, out g) == false)
+                return;
+            byte b;
+            if (byte.TryParse(border_color_b_text_box.Text, NumberStyles.HexNumber, null, out b) == false)
+                return;
+
+            Color c = Color.FromArgb(a, r, g, b);
+            border_color_button.Background = new SolidColorBrush(c);
+
+            syncer.SetBorderColorPropertyToSelections();
+        }
+
+        private void FillColorButtonClick(object sender, RoutedEventArgs e)
+        {
+            System.Windows.Forms.ColorDialog d = new System.Windows.Forms.ColorDialog();
+            if (d.ShowDialog() != System.Windows.Forms.DialogResult.OK)
+                return;
+
+            Color c = Color.FromArgb(d.Color.A, d.Color.R, d.Color.G, d.Color.B);
+            fill_color_button.Background = new SolidColorBrush(c);
+            fill_color_a_text_box.Text = d.Color.A.ToString("X2");
+            fill_color_r_text_box.Text = d.Color.R.ToString("X2");
+            fill_color_g_text_box.Text = d.Color.G.ToString("X2");
+            fill_color_b_text_box.Text = d.Color.B.ToString("X2");
+
+            syncer.SetFillPropertyToSelections();
+        }
+
+        private void Open_menu_item_Click(object sender, RoutedEventArgs e)
+        {
+            using (System.Windows.Forms.OpenFileDialog openFileDialog = new System.Windows.Forms.OpenFileDialog())
+            {
+                if (openFileDialog.ShowDialog() != System.Windows.Forms.DialogResult.OK)
+                    return;
+
+                LoadSavedFile(openFileDialog.FileName);
+            }
+        }
+
+        private void SaveFile(string path)
+        {
+            SaveData save_data = new SaveData();
+
+            foreach (var d in Gv.ui_editor_window.drawables)
+            {
+                d.Save(save_data);
+            }
+
+            string content = JsonConvert.SerializeObject(save_data, Formatting.Indented);
+            System.IO.File.WriteAllText(path, content);
+        }
+
+        private void Save_default_menu_item_Click(object sender, RoutedEventArgs e)
+        {
+            SaveFile(Gv.default_ui_design_path);
+        }
+
+        private void Save_as_menu_item_Click(object sender, RoutedEventArgs e)
+        {
+            System.Windows.Forms.SaveFileDialog saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            saveFileDialog1.Filter = "json|*.json";
+            saveFileDialog1.Title = "Save file";
+            saveFileDialog1.ShowDialog();
+
+            if (saveFileDialog1.FileName != "")
+            {
+                SaveFile(saveFileDialog1.FileName);
+            }
+        }
+
+        private void Text_toggle_button_Click(object sender, RoutedEventArgs e)
+        {
+            SetDrawAction(DrawAction.Text);
+        }
+
+        private void Polygon_toggle_button_Click(object sender, RoutedEventArgs e)
+        {
+            SetDrawAction(DrawAction.Polygon);
+        }
+
+        private void Canvas_KeyUp(object sender, KeyEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+        private void Canvas_KeyDown(object sender, KeyEventArgs e)
+        {
+            Gv.ui_editor_window.game_view_strategy.KeyDown(e);
+            e.Handled = true;
+        }
+    }
+}
