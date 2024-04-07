@@ -1,8 +1,8 @@
 # RoTK3-Prototype
 
-I tried to learn programing an historical simulation game by mimicing Romance of Three kingdom 3.
+I tried to learn game programing by mimicing Romance of Three kingdom 3.
 I have implemented some internal affairs functions, I think it will be OK to implement all of it.
-but the battle/war function is not covered yet 
+but the battle/war function is not covered yet
 
 <h2>Snapshots</h2> 
 
