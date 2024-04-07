@@ -1,6 +1,6 @@
 # RoTK3-Prototype
 
-I tried to write one of my favorite game - Romance of Three kingdom III\
+I tried to write my favorite game - Romance of Three kingdom III\
 I have implemented some internal affairs functions, I think it will be OK to implement all of it\
 But the battle/war function is not covered yet\
 
