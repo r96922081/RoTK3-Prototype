@@ -1,7 +1,7 @@
 # RoTK3-Prototype
 
 I tried to write one of my favorite game - Romance of Three kingdom III\
-I have implemented some internal affairs functions, I think it will be OK to implement all of it\
+I have implemented some internal affairs functions, I think it will be OK to implement all of them\
 But the battle/war function is not tried yet
 
 <h2>Snapshots</h2> 
