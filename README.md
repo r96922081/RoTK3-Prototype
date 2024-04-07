@@ -1,6 +1,7 @@
 # RoTK3-Prototype
 
 <h2>Snapshots</h2> 
+
 Execute an city development plan|  Select other city (to spy or intelligence)
 :-----------:|:------:
 ![](https://r96922081.github.io/images/rtk3_1.png)|![](https://r96922081.github.io/images/rtk3_2.png)
