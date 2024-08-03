@@ -1,8 +1,7 @@
 # RoTK3-Prototype
 
 I tried to write one of my favorite game - Romance of Three kingdom III (KOEI Sangokushi III)\
-I have implemented some internal affairs functions, I think it will be OK to implement all of them\
-But the battle/war function is not tried yet
+I have implemented some internal affairs functions, But the battle functions are not tried yet\
 
 <h2>Snapshots</h2> 
 
