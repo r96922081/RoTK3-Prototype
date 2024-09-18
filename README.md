@@ -1,6 +1,6 @@
 # RoTK3-Prototype
 
-Implements some internal affairs functions of the game: Romance of Three kingdom III (KOEI Sangokushi III)\
+Implements some internal affairs functions of the game: Romance of Three kingdom III (KOEI Sangokushi III)
 
 <h2>Snapshots</h2> 
 
