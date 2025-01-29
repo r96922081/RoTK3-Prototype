@@ -1,24 +1,23 @@
-## C Compiler 
-This is a C compiler implementation written by C#, support many (not all) C89 syntax. 
+# RoTK3-Prototype
 
-Compile and run [8-Queen.c](https://r96922081.github.io/C-Compiler/EightQueen.c) example:
+Implements some internal affairs functions of the game: Romance of Three kingdom III (KOEI Sangokushi III)
 
-    . . . . . . . Q
-    . . . Q . . . .
-    Q . . . . . . .
-    . . Q . . . . .
-    . . . . . Q . .
-    . Q . . . . . .
-    . . . . . . Q .
-    . . . . Q . . .
-    Solution count =  92
-    
-Compile and run [LCS.c](https://r96922081.github.io/C-Compiler/LCS.c)  (Longest common subsequence) example:
+<h2>Snapshots</h2> 
 
-    Length of Longest Common Subsequence of AGGTABWZ, GXTXAYBYZ :  5
-    Longest Common Subsequence: GTABZ
+Execute an development plan|  Select other city to spy
+:-----------:|:------:
+![](https://r96922081.github.io/images/rtk3_1.png)|![](https://r96922081.github.io/images/rtk3_2.png)
+List officers| City information
+![](https://r96922081.github.io/images/rtk3_3.png)|![](https://r96922081.github.io/images/rtk3_4.png)
+Select multiple officers| Other force is plotting
+![](https://r96922081.github.io/images/rtk3_5.png)|![](https://r96922081.github.io/images/rtk3_6.png)
 
-Compile and run [ReverseLinkedList.c](https://r96922081.github.io/C-Compiler/ReverseLinkedList.c) example:
+<h2>Demo</h2>
 
-    Original list: 50 -> 40 -> 30 -> 20 -> 10 -> NULL
-    Reversed list: 10 -> 20 -> 30 -> 40 -> 50 -> NULL
+![](https://r96922081.github.io/images/rtk3_gif1.gif)
+
+<h2>Create UI by UI editor</h2> 
+
+Ui Editor|  Rendered Result
+:-----------:|:------:
+![](https://r96922081.github.io/images/rtk3_8.png)|![](https://r96922081.github.io/images/rtk3_7.png)
