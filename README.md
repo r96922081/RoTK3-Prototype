@@ -2,6 +2,8 @@
 
 Implements some internal affairs functions of the game: Romance of Three kingdom III (KOEI Sangokushi III)
 
+It is written by C# and WPF
+
 <h2>Snapshots</h2> 
 
 Execute an development plan|  Select other city to spy
