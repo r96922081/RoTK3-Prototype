@@ -1,8 +1,6 @@
 # RoTK3-Prototype
 
-Implements some internal affairs functions of the game: Romance of Three kingdom III (KOEI Sangokushi III)
-
-It is written by C# and WPF
+A simulation of  "Romance of Three kingdom III (KOEI Sangokushi III)", written by C# and WPF.  But only partilly done
 
 <h2>Snapshots</h2> 
 
